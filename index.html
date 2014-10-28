@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Demo page for arrow-time</title>
+	</head>
+	<script src="timer.js" type="text/javascript"></script>
+	<body onload="model = { count: 5, interval: 2, sets: 3, setDelay: 3 }">
+		<select onchange="model.sets = +this.value" autofocus>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3" selected>3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		sets of
+		<select onchange="model.count = +this.value">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5" selected>5</option>
+		</select>
+		beep(s)
+		<select onchange="model.interval = +this.value">
+			<option value="1">1</option>
+			<option value="2" selected>2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		seconds apart
+		<button onclick="Timer.start( model )">Start</button>
+	</body>
+</html>
